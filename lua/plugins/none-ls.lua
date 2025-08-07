@@ -1,6 +1,6 @@
 return {
   "nvimtools/none-ls.nvim",
-  dependencies = { "mason.nvim" },
+  dependencies = { "mason.nvim", "nvimtools/none-ls-extras.nvim", },
   config = function()
     local null_ls = require("null-ls")
 
@@ -13,6 +13,7 @@ return {
         null_ls.builtins.formatting.isort,
 
         null_ls.builtins.formatting.prettier,
+        require("none-ls.diagnostics.eslint_d"),
       }
     })
 
