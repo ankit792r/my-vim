@@ -9,6 +9,6 @@ return {
 	config = function()
 		vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle left reveal<CR>", {})
     vim.keymap.set("n", "<leader>s", ":Neotree git_status toggle float<CR>", {})
-		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
+		vim.keymap.set("n", "<leader>bl", ":Neotree buffers reveal float<CR>", {})
 	end,
 }

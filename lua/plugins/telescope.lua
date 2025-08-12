@@ -12,6 +12,7 @@ return {
           ["ui-select"] = {
             require("telescope.themes").get_dropdown({}),
           },
+          ["harpoon"] = {}
         },
       })
       local builtin = require("telescope.builtin")
