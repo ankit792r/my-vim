@@ -26,7 +26,7 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- vim.keymap.set("x", "<leader>p", "\"_dp")
+vim.keymap.set("x", "<leader>p", "\"_dp")
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.wo.number = true
@@ -34,7 +34,7 @@ vim.wo.number = true
 vim.diagnostic.config({
 	signs = true,
 	underline = true,
-	update_in_insert = false,
+	update_in_insert = true,
 	virtual_text = {
 		prefix = "■",
 	},
