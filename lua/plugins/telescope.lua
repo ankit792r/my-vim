@@ -21,7 +21,6 @@ return {
 			vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, {})
 
 			require("telescope").load_extension("ui-select")
-			require("telescope").load_extension("fidget")
 		end,
 	},
 }
