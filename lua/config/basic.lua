@@ -31,14 +31,17 @@ vim.keymap.set("x", "<leader>p", '"_dp')
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.wo.number = true
 
---vim.opt.showmode = false
+vim.opt.showmode = false
 vim.opt.cmdheight = 0
 
+vim.cmd [[ autocmd RecordingEnter * set cmdheight=1 ]]
+vim.cmd [[ autocmd RecordingLeave * set cmdheight=0 ]]
+
 vim.diagnostic.config({
-	signs = true,
-	underline = true,
-	update_in_insert = true,
-	virtual_text = {
-		prefix = "■",
-	},
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  virtual_text = {
+    prefix = "■",
+  },
 })
