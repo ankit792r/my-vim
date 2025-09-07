@@ -28,26 +28,24 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("x", "<leader>p", '"_dp')
 
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
-vim.wo.number = true
-
-vim.opt.showmode = false
-vim.opt.cmdheight = 0
+vim.keymap.set("n", "<esc>", "<cmd>noh<CR><esc>", { desc = "Clear hlsearch", silent = true })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer", silent = true })
+
+vim.wo.number = true
+vim.opt.showmode = false
+vim.opt.cmdheight = 0
+
 vim.cmd([[ autocmd RecordingEnter * set cmdheight=1 ]])
 vim.cmd([[ autocmd RecordingLeave * set cmdheight=0 ]])
 
 vim.diagnostic.config({
 	signs = true,
-	underline = true,
-	update_in_insert = true,
+	unerline = true,
+	upate_in_insert = true,
 	virtual_text = {
 		prefix = "■",
 	},
 })
 
-vim.keymap.set("n", "<esc>", "<cmd>noh<cr><esc>", { desc = "Clear hlsearch", silent = true })
-
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer", silent = true })
+-- vim.lsp.on_type_formatting.enable()
