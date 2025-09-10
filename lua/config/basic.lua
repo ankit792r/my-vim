@@ -40,12 +40,12 @@ vim.cmd([[ autocmd RecordingEnter * set cmdheight=1 ]])
 vim.cmd([[ autocmd RecordingLeave * set cmdheight=0 ]])
 
 vim.diagnostic.config({
-	signs = true,
-	unerline = true,
-	upate_in_insert = true,
-	virtual_text = {
-		prefix = "■",
-	},
+  signs = true,
+  unerline = true,
+  upate_in_insert = true,
+  virtual_text = {
+    prefix = "■",
+  },
 })
 
 -- vim.lsp.on_type_formatting.enable()

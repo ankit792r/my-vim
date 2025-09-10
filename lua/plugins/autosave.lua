@@ -10,8 +10,8 @@ return {
 			message = function()
 				return ("saved at " .. vim.fn.strftime("%H:%M:%S"))
 			end,
-      dim = 0.18,
-      cleaning_interval = 1250
+			dim = 0.18,
+			cleaning_interval = 1250,
 		},
 		trigger_events = { -- See :h events
 			immediate_save = { "BufLeave", "FocusLost", "QuitPre", "VimSuspend" },
