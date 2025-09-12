@@ -6,8 +6,8 @@ return {
 	opts = {
 		enabled = true,
 		execute_message = {
-			enabled = true,
-			message = function()
+      enabled = true,
+      message = function()
 				return ("saved at " .. vim.fn.strftime("%H:%M:%S"))
 			end,
       dim = 0.18,

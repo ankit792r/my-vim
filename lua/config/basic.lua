@@ -33,8 +33,9 @@ vim.wo.number = true
 
 vim.opt.showmode = false
 vim.opt.cmdheight = 0
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer", silent = true })
+
+vim.keymap.set("n", "<esc>", ":noh<CR>")
+
 vim.cmd([[ autocmd RecordingEnter * set cmdheight=1 ]])
 vim.cmd([[ autocmd RecordingLeave * set cmdheight=0 ]])
 
@@ -46,8 +47,3 @@ vim.diagnostic.config({
 		prefix = "■",
 	},
 })
-
-vim.keymap.set("n", "<esc>", "<cmd>noh<cr><esc>", { desc = "Clear hlsearch", silent = true })
-
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer", silent = true })
