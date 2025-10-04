@@ -8,7 +8,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("x", "<leader>p", '"_dp')
 
-vim.keymap.set("n", "<esc>", ":noh<CR>")
+vim.keymap.set("n", "<esc>", "<cmd>noh<CR>")
 vim.keymap.set("n", "<leader>sr", ":%s/")
 
 vim.keymap.set("n", "<leader>w", ":w<CR>")
